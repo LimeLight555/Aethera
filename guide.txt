@@ -1,0 +1,39 @@
+I see a bunch of people having questions about their early spaceship design, so hopefully this can be helpful. This is what I would consider best practices and beginners tips as we know so far (a week in a half into Space Age). Obviously the goal is to enjoy yourself, feel free to ignore everything and build whacky or cool looking spaceship.
+
+Gun turrets fed by locally crafted yellow ammo is the name of the game. Asteroids have 90-100% resistance to lasers, fire and electricity. Explosions and mines are viable.
+
+Your focus should be on producing as much Ammunition as possible and some Thruster Fuel. Be mindful of your ratios of Smelters to Ammo assembling machine to sustain your Ammo on the move. (4.8 Electric Furnace for 1 Assembling Machine mk2 crafting continuously assuming no Speed modules)
+
+Being stationary in Nauvis' orbit is perfectly safe, it only contains the smallest meteors that can't damage your platform. This is not the case on other planet's orbit.
+
+The faster you move the more asteroids come flying at your ship. Having a single thruster underfed on fuel will make every early travels a breeze.
+
+Be mindful of your gun turrets range, while you're on the move all the asteroid will come from the front, so any turret's range expanding on the sides of your ship will make them waste ammo firing down asteroid that couldn't have hit you. This is a major source of wasted ammo if you simply fill the front of you ship with horizontal lines of turret spanning the entire width. To me the most efficient is to have a 'spine' of a vertical belt feeding ammo in the center of your ship with a column of gun turret on each side of it.
+
+Put efficiency modules everywhere. Also Fulgora's orbit has terrible solar energy, be mindful of that.
+
+Your platform's shape affect your speed: The biggest factor is platform width - thruster width Your platform's weight (how many foundations you use) has only a minor effect on speed.
+Building wider without adding thrusters will slow you down a lot.
+Building wider to fit-in more thruster will make you faster, assuming you can sustain the fuel consumption - this stop being the case if you go above 31 thrusters of width, past that wider thrusters will slow you down anyway.
+Therefore there is a pretty big incentive to build taller.
+You cannot build south of a thruster... unless you leave an 85 tiles vertical gap ;)
+Thanks to @Silv3rDragon for all the data and testing regarding speed!
+And remember going faster = more asteroids.
+
+Making higher quality Solar panels and Collectors (the grabby arms) is easily doable before leaving Nauvis and has a big effect. Collector's quality increase the number of arms and range!
+
+Combinator logic allows you to improve many aspect of your spaceship, even if you're only at blue science.
+
+You can read your spaceship's speed by wiring your platform's hub and use the signal to cut off a pair of pump feeding your thruster to act as a speed limiter. If you choose to do so it lets you move at your own pace to lower the rate of asteroids spawning and be safer.
+
+You can hot swap Crusher's recipe to what you need and get by with only one or two of them. You can also have them reprocess chunks once you have the tech unlocked.
+
+You can throttle your Thruster's fuel consumption to be more efficient. You still get 100% thrust by providing 80% fuel or 50% thrust by providing 28% fuel. Alt+Click on a Thruster then scroll down to see the graph. Sadly this is slightly tricky to do by yourself as going Combinator logic -> Pump -> Storage Tank -> Thruster won't work, you need to do Pump -> Thruster directly, which prevents you from reading the current fuel amount. So you need to toggle your Pump activation based on a clock signal (and your desired fuel %) to have it work without having knowledge of the current Thruster's fuel content. ... or just grab a blueprint that does it for you: Fuel consumption control for thrusters
+
+You can filter set your Collectors to only grab the ressources you need, makes them more efficient if they ignore asteroid chunks you don't care about.
+
+You can use Collectors as Storage (They have 39 slots for a 3x3 space whereas Cargo bays are 20 slots for the same space at Common quality) if you use Combinator logic to set the filters of your inserter grabbing for the Collector storage, a different filter signal for what your Collector should grab, and yet a third signal to read the Collector's storage content, with one way combinator signal to avoid mixing the content and filter Collector's signal. (this one took me a while, here is a blueprint)
+
+I had barely touched combinators before 2.0 but I had a blast messing with them over the last two days. Err... now I ought to get out of Vulcanus and finally build Purple Science. Wait I could try to put Foundries on my spaceship, better do it now!
+
+Overall I think both the speed formula and the turret's range (wasting ammo when you fire on asteroid on your side while moving - but you still need some side coverage to get hit when stationary) very much favors building tall and thin spaceships.
